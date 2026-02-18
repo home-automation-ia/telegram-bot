@@ -23,8 +23,13 @@ async def handle_checklist(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
 
     data = query.data
+    
+    # Ignorar botones que no hacen nada (headers)
+    if not data or data == "noop":
+         return
+
     # Verificamos si es un callback de checklist (chk_...)
-    if not data or not data.startswith("chk_"):
+    if not data.startswith("chk_"):
         return
 
     try:
