@@ -1,10 +1,10 @@
 name: Run Telegram Bot
 
 on:
-  schedule:
-    # Se ejecuta cada 5h y 50min aprox para renovar el proceso
-    # Nota: El cron de GitHub no es exacto, puede haber retrasos o superposiciones.
-    - cron: '*/350 * * * *' 
+#  schedule:
+#    # Se ejecuta cada 5h y 50min aprox para renovar el proceso
+#    # Nota: El cron de GitHub no es exacto, puede haber retrasos o superposiciones.
+#    - cron: '*/350 * * * *' 
   workflow_dispatch: # Permite ejecución manual desde la pestaña Actions
 
 jobs:
